@@ -19,7 +19,7 @@ Source2:        cargo_config
 ExclusiveArch:  %{rust_arches}
 #if %{__cargo_skip_build}
 BuildArch:      noarch
-%endif
+#endif
 
 BuildRequires:  rust-packaging
 
