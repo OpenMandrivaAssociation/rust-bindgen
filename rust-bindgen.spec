@@ -11,7 +11,10 @@ Summary:        Automatically generates Rust FFI bindings to C and C++ libraries
 # Upstream license specification: BSD-3-Clause
 License:        BSD
 URL:            https://crates.io/crates/bindgen
-Source:         %{crates_source}
+#Source:         %{crates_source}
+Source0:      https://github.com/rust-lang/rust-bindgen/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+Source1:        vendor.tar.xz
+Source2:        cargo_config
 
 ExclusiveArch:  %{rust_arches}
 %if %{__cargo_skip_build}
@@ -243,8 +246,8 @@ which use "which-rustfmt" feature of "%{crate}" crate.
 %ghost %{cargo_registry}/%{crate}-%{version}/Cargo.toml
 
 %prep
-%autosetup -n %{crate}-%{version_no_tilde} -p1
-%cargo_prep
+%autosetup -p 1 -a 1
+install -D -m 0644 %{SOURCE2} .cargo/config
 
 %generate_buildrequires
 %cargo_generate_buildrequires
