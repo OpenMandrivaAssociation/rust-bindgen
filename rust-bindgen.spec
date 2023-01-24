@@ -17,7 +17,7 @@ Source1:        vendor.tar.xz
 Source2:        cargo_config
 
 ExclusiveArch:  %{rust_arches}
-%if %{__cargo_skip_build}
+#if %{__cargo_skip_build}
 BuildArch:      noarch
 %endif
 
@@ -249,8 +249,8 @@ which use "which-rustfmt" feature of "%{crate}" crate.
 %autosetup -p 1 -a 1
 install -D -m 0644 %{SOURCE2} .cargo/config
 
-%generate_buildrequires
-%cargo_generate_buildrequires
+#generate_buildrequires
+#cargo_generate_buildrequires
 
 %build
 %cargo_build
