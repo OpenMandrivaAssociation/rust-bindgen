@@ -1,2 +1,3 @@
 sources:
-  bindgen-0.63.0.crate: 02a5f7e75a8ea73dec1c175cba829723cdba4cf5
+  rust-bindgen-0.63.0.tar.gz: 467ce178d57b716018ec85f24e1cddbd23759091
+  vendor.tar.xz: f68ff22e00c34a0f5493d07f1cb99102155b787a
