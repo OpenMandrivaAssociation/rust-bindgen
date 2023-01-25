@@ -258,6 +258,8 @@ install -D -m 0644 %{SOURCE2} .cargo/config
 %install
 %cargo_install
 
+install -D -m 0755 target/release/bindgen %{buildroot}%{_bindir}/bindgen
+
 %if %{with check}
 %check
 %cargo_test
