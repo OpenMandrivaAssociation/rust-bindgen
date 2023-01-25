@@ -42,17 +42,17 @@ Summary:        %{summary}
 %{_bindir}/bindgen
 %endif
 
-#package        devel
-#Summary:        %{summary}
-#BuildArch:      noarch
-#
-#description    devel %{_description}
-#
-#This package contains library source intended for building other packages
-#which use "%{crate}" crate.
+%package        devel
+Summary:        %{summary}
+BuildArch:      noarch
 
-#files          devel
-#doc README.md
+%description    devel %{_description}
+
+This package contains library source intended for building other packages
+which use "%{crate}" crate.
+
+%files          devel
+%doc README.md
 #{cargo_registry}/%{crate}-%{version}/
 
 %package     -n %{name}+default-devel
