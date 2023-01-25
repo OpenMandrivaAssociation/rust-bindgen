@@ -51,7 +51,7 @@ which use "%{crate}" crate.
 
 %files          devel
 %doc README.md
-%{cargo_registry}/%{crate}-%{version}/
+#{cargo_registry}/%{crate}-%{version}/
 
 %package     -n %{name}+default-devel
 Summary:        %{summary}
