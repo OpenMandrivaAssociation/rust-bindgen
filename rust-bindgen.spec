@@ -6,7 +6,7 @@
 %global crate bindgen
 
 Name:           rust-%{crate}
-Version:        0.63.0
+Version:        0.64.0
 Release:        1%{?dist}
 Summary:        Automatically generates Rust FFI bindings to C and C++ libraries
 
