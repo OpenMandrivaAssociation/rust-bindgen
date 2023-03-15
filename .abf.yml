@@ -1,3 +1,3 @@
 sources:
-  rust-bindgen-0.63.0.tar.gz: 467ce178d57b716018ec85f24e1cddbd23759091
-  vendor.tar.xz: f68ff22e00c34a0f5493d07f1cb99102155b787a
+  rust-bindgen-0.64.0.tar.gz: efa816a78b6bfe8653178c9071b1d5aa7f37f93a
+  vendor.tar.xz: 8a6409327fd855051ba20adb59065077a3837456
